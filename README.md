@@ -6,12 +6,12 @@
 - using lazy
 ```lua
 {
-    "MisustinIvan/music-info",
+    "MisustinIvan/music_info",
     config = function()
-        require("music-info").setup("playerctl")
+        require("music_info").setup("playerctl")
     end
 }
 ```
 - for now, the only supported backend is `playerctl`
 - use the `:MusicInfo` command to display the info
-- or use ```lua require("music-info").music_info()``` in lua
+- or use ```lua require("music_info").music_info()``` in lua
