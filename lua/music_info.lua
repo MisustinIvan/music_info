@@ -42,7 +42,7 @@ M.music_info = function()
 	artist_handle:close()
 
 	if artist == "No players found" then
-		return "󰝚 : None"
+		return "󰝚 None"
 	end
 
 	---@type file*?, string?
@@ -54,10 +54,10 @@ M.music_info = function()
 	title_handle:close()
 
 	if title == "No players found" then
-		return "󰝚 : None"
+		return "󰝚 None"
 	end
 
-	return "󰝚 : " .. artist .. " - " .. title
+	return "󰝚 " .. artist .. " - " .. title
 end
 
 M.version = "1.0.0"
