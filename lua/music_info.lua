@@ -54,7 +54,7 @@ M.music_info = function()
 	title_handle:close()
 
 	---@type file*?, string?
-	local status_handle, status_err = io.popen("playerctl metadata xesam:title 2>&1", "r")
+	local status_handle, status_err = io.popen("playerctl status 2>&1", "r")
 	if not status_handle then
 		return "Error: " .. status_err
 	end
