@@ -62,9 +62,9 @@ M.music_info = function()
 	status_handle:close()
 
 	if status == "Playing" then
-		status = "󰐊 "
-	else
 		status = "󰏤 "
+	else
+		status = "󰐊 "
 	end
 
 	return "󰝚 " .. status .. artist .. " - " .. title
