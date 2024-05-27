@@ -53,11 +53,21 @@ M.music_info = function()
 	local title = title_handle:read("*a"):gsub("\n", "")
 	title_handle:close()
 
-	if title == "No players found" then
-		return "󰝚 None"
+	---@type file*?, string?
+	local status_handle, status_err = io.popen("playerctl metadata xesam:title 2>&1", "r")
+	if not status_handle then
+		return "Error: " .. status_err
+	end
+	local status = status_handle:read("*a"):gsub("\n", "")
+	status_handle:close()
+
+	if status == "Playing" then
+		status = "󰐊 "
+	else
+		status = "󰏤 "
 	end
 
-	return "󰝚 " .. artist .. " - " .. title
+	return "󰝚 " .. status .. artist .. " - " .. title
 end
 
 M.version = "1.0.0"
