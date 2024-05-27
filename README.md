@@ -17,4 +17,4 @@
 - or use ```lua require("music_info").music_info()``` in lua
 
 ## Example with lualine
-[image](./Screenshot_20240527_191245.png)
+![image](./Screenshot_20240527_191245.png)
